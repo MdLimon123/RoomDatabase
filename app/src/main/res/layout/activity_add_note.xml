@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="4dp"
+    tools:context=".AddNoteActivity">
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/txtInput"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      tools:ignore="MissingConstraints">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/ed_title"
+          android:inputType="text"
+          android:hint="Text"
+          android:singleLine="true"/>
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/txtInput"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtInput2"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:hint="Content"
+                android:gravity="top"
+                android:singleLine="false"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/but_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_gravity="center"
+            android:background="@color/white"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
